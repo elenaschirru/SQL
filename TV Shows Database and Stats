@@ -1,0 +1,33 @@
+CREATE TABLE serieTV_davendere (id INTEGER PRIMARY KEY, nome TEXT, autore TEXT, piattaforma TEXT, anno INTEGER, voto INTEGER, prezzo INTEGER, quantità_serie INTEGER); 
+
+INSERT INTO serieTV_davendere VALUES (1, "Bridgerton", "Chris Van Dusen", "Netflix", 2020, 8, 100, 1 ); 
+INSERT INTO serieTV_davendere VALUES (2, "Normal people", "Lenny Abrahamson", "Prime Video", 2020, 10, 250, 1);
+INSERT INTO serieTV_davendere VALUES (3, "Cobra Kai", "Jon Hurwitz", "Netflix", 2018, 9, 150, 1);
+INSERT INTO serieTV_davendere VALUES (4, "Maids", "Molly Smith Metzler", "Netflix", 2021, 10, 200, 1);
+INSERT INTO serieTV_davendere VALUES (5, "Ted Lasso", "Jason Sudekis", "Apple TV", 2020, 10, 250, 1); 
+INSERT INTO serieTV_davendere VALUES (6, "The Boys", "Eric Kripke", "Prime Video", 2019, 7, 80, 1);
+INSERT INTO serieTV_davendere VALUES (7, "Gli irregolari", "Tom Bidwell", "Netflix", 2021, 6, 50, 1);
+INSERT INTO serieTV_davendere VALUES (8, "Never Ever I have", "Mindy Kaling", "Netflix", 2020, 9, 170, 1);
+INSERT INTO serieTV_davendere VALUES (9, "Sex Education", "Laurie Nunn", "Netflix", 2019, 8, 160, 1);
+INSERT INTO serieTV_davendere VALUES (10, "New girl", "Elizabeth Meriwether", "Disnely Plus", 2011, 8, 180, 1);
+INSERT INTO serieTV_davendere VALUES (11, "Please like me", "Josh Thomas", "Netflix", 2013, 7, 60, 1);
+INSERT INTO serieTV_davendere VALUES (12, "The Office", "Greg Daniels", "Prime Video", 2005, 9, 210, 1);
+INSERT INTO serieTV_davendere VALUES (13, "The Office UK", "Ricky Gervais", "Prime Video", 2001, 8, 200, 1);
+INSERT INTO serieTV_davendere VALUES (14, "Boris", "Luca Manzi", "Sky", 2007, 7, 185, 1);
+INSERT INTO serieTV_davendere VALUES (15, "Schitt's Creek", "Eugene Levy", "Prime Video", 2015, 9, 230, 1); 
+
+SELECT * FROM serieTV_davendere;  
+
+SELECT * FROM serieTV_davendere ORDER BY prezzo; 
+
+SELECT * FROM serieTV_davendere ORDER BY prezzo desc; 
+
+SELECT * FROM serieTV_davendere ORDER BY voto desc;
+
+SELECT * FROM serieTV_davendere WHERE voto >= 8 ORDER BY voto desc; 
+
+SELECT SUM (prezzo) FROM serieTV_davendere;
+
+SELECT anno, SUM (quantità_serie) FROM serieTV_davendere GROUP BY anno; 
+
+SELECT nome, SUM (quantità_serie) FROM serieTV_davendere GROUP BY anno; 
