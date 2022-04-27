@@ -101,7 +101,7 @@ SELECT COUNT(*) AS totale_usa FROM marvels WHERE hometown IN ("USA");
 
 SELECT name, AVG(fighting_skills) AS più_forti FROM marvels GROUP BY name HAVING più_forti >3 ORDER BY più_forti desc; 
 
-/*Crea una classsifica e un Dream Team dei supereroi più forti*/
+/*Crea una classifica e un Dream Team dei supereroi più forti*/
 
 SELECT name, fighting_skills, 
  CASE 
